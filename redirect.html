@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf=8">
+  <title>Redirecting</title>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <scipt>
+    var hash = window.location.hash.substring(1);
+    var params = {};
+    hash.split('&').map(hk => {
+      let temp = hk.split('=');
+      params[temp[0]] = temp [1];
+     });
+     localStorage.setItem('access_token', params.access_token);
+     localStorage.setItem('expires_in', params.expires_in);
+     localStorage.setItem('token_type', params.token_type);
+     localStorage.setItem('refresh_token', params.refesh_token);
+     window.locatio.href = 'http://localhost:5000';
+  </script>
+</body>
+</html>
